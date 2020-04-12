@@ -1,0 +1,9 @@
+yarn init
+yarn add @babel/cli
+yarn add @babel/preset-env
+yarn add @babel/core
+
+# Na raiz do projeto, criar arquivo ".babelrs" e colocar esse código:
+{
+    "presets": ["@babel/preset-env"]
+}

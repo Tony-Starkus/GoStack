@@ -1,0 +1,18 @@
+1. Executar apenas uma vez na máquina: $ sudo npm install -g create-react-app
+
+2. Criar projeto: $ create-react-app <nome_projeto>
+Ex: create-react-app huntweb
+OBS: ISSO CRIA UMA PASTA COM O PROJETO, ENTÃO ESCOLHA O DIRETÓRIO CORRETO
+
+3. Iniciar/Executar a aplicação: $ npm start
+
+4. Excluir {
+    src/App.css
+    src/App.test.js
+    src/index.css
+    src/logo.svg
+}
+
+5. Criar rotas: $ yarn add react-router-dom
+
+

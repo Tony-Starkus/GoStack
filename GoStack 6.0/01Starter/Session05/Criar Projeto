@@ -1,0 +1,70 @@
+# INSTALATION #
+$ sudo npm i -g react-native
+$ sudo npm install -g react-native-cli
+
+- Usar Android Studio para configurar o Android SDK
+
+- Emulador {
+
+}
+
+# INSTALATION #
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Criar projeto: $ react-native init <nome-do-projeto>
+Ex: $ react-native init hunt
+OBS: isso já cria uma pasta chamado 'hunt'.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Executar no Android
+$ react-native run-android
+
+ERROS NA INSTALAÇÃO DO APP {
+    1. unable to load script. Make sure you're either running a Metro server react native[...] {
+        Step 1: Create a directory in android/app/src/main/assets
+
+        Linux command: $ mkdir android/app/src/main/assets
+
+        Step 2: Rename index.android.js (in root directory) to index.js (Maybe there is an index.js file in which case you do not need to rename it) then run
+        the following command:
+
+        Linux command: $ react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+
+        (Caso esse comando apresentar erro, execute isso e depois tente novamente: $ sudo npm install -i -g --force react-native-cli)
+
+        Step 3: Build your APK: react-native run-android    
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Ligar servidor para Fast Refresh
+$ react-native start
+
+ERROS EM ATUALIZAR O APPP {
+    Error: ENOSPC: System limit for number of file watchers reached, watch [...] {
+        Executar comando: $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+4- React Navigation (yarn ou npm)
+$ npm install react-navigation
+OBS: Parece que nas versões atuais, o stack foi movido para outro pacote. Tentar a solução 2.
+
+ERROS {
+    1.  Error: Unable to resolve module `react-native-gesture-handler` {
+            $ npm i react-native-gesture-handler --save && react-native link
+    }
+    
+    2. createStackNavigator is not a function {
+            $ npm i react-navigation-stack
+            $ npm i react-navigation-stack @react-native-community/masked-view
+            $ npm install react-native-safe-area-context
+            $ npm i react-native-screens
+    }
+
+}
+
